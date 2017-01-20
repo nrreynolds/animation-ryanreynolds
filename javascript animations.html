@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java animate</title>
+<style type="text/css">
+#container {
+	width: 500px;
+	height: 500px;
+	background-image: url('7716050_orig.jpg');
+	background: gray;
+}	
+
+#animate2 {
+	 top: 500px;
+     position: absolute;
+     z-index: 1.5;
+}
+#bigface{
+	position: absolute;
+	top: 316px;
+	left:166px;
+	z-index: 0;
+}
+
+#bigface2{
+	position: absolute;
+	top: 316px;
+	left:166px;
+	z-index: 1;
+}
+#animate {
+    position: absolute;
+    z-index: 0.1;
+}
+</style>
+
+
+
+</head>
+<body>
+<div id="container">
+
+<img id="animate" src="Happy-face-clip-art-smiley-face-clipart-3-clipartcow.png" height="50px" width="50px">
+<img id="animate" src="Happy-face-clip-art-smiley-face-clipart-3-clipartcow.png" height="50px" width="50px">
+<img id="bigface" src="big-sad-face-clipart-best-ZcKtx8-clipart.png" height="200px" width="200px">
+<img id="bigface2" src="big-sad-face-clipart-best-ZcKtx8-clipart2.png" height="200px" width="200px">
+</div>
+
+<button onclick="Move()">Click Me</button>
+
+<script type="text/javascript">
+
+function Move() {
+	var elem = document.getElementById("animate");
+	var pos = 0;
+	var id = setInterval(frame, 5);
+	function frame() {
+		if (pos == 400) {
+		clearInterval(id);} 
+		else {
+		pos++;
+		elem.style.top = pos + 'px';
+		elem.style.left = pos*.5 + 'px';
+
+		}
+	}
+}
+
+	
+
+</script>
+</body>
+</html>
